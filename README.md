@@ -6,4 +6,4 @@ This is a collection of files for Data613. This project will create a shiny app 
 
 # Preview of Shiny App (In Progress)
 
-
+![](images/initial_shiny_app_snapshot.png)
