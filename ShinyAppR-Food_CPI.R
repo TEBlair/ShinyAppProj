@@ -61,6 +61,26 @@ server <- function(input, output) {
       theme_bw(base_family = "Roboto Condensed") +
       theme(plot.title = element_text(face = "bold"))
   })
+  
+  output$price_table <- renderDT({
+    dat <- filtered_data()
+    dat <- data.frame(
+      Date = dat$Date,
+      Price = dat[[input$food_category]]
+    )
+    
+    datatable(dat, 
+              options = list(pageLength = 10),
+              rownames = FALSE) %>%
+      formatStyle(
+        "Price",
+        background = styleColorBar(range(dat$Price, na.rm = TRUE), 'lightblue'),
+        backgroundSize = '98% 88%',
+        backgroundRepeat = 'no-repeat',
+        backgroundPosition = 'center'
+      )
+  })
+  
 }
 
 # Run the application
