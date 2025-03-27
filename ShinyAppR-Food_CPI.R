@@ -1,7 +1,7 @@
 library(shiny)
 library(ggplot2)
 library(dplyr)
-
+library(shinyWidgets)
 
 # Load the dataset
 df <- read.csv("/Users/ogheneatoma/Downloads/combined.csv")
@@ -11,7 +11,10 @@ df$Date <- as.Date(df$Date)
 
 # UI
 ui <- fluidPage(
-  titlePanel("Shiny App 2025: Food Consumer Price Index Inflation"),
+  titlePanel("Shiny App 2025: US Consumer Price Index (Food at Home) Inflation"),
+  setBackgroundColor(
+    color = c("#F6F8FB")
+  ),
   h3("Erika, Melissa, Thomas"),
   sidebarLayout(
     sidebarPanel(
@@ -38,17 +41,25 @@ ui <- fluidPage(
 server <- function(input, output) {
   filtered_data <- reactive({
     df %>%
-      filter(Date >= input$time_range[1] & Date <= input$time_range[2]) %>%
-      select(Date, all_of(input$food_category))
+      filter(Date >= input$time_range[1] & Date <= input$time_range[2])
   })
   
   output$price_plot <- renderPlot({
     ggplot(filtered_data(), aes(x = Date, y = .data[[input$food_category]])) +
       geom_line(color = "blue", size = 1) +
-      labs(title = paste("Price Trend of", input$food_category),
+      annotate(geom = "label", x = as.Date("2020-01-01"), y = 310, 
+               label = "COVID-19 (2020)", size = 4, family = "Roboto Condensed", hjust = 1, color = "red") +
+      annotate(geom = "label", x = as.Date("2023-05-11"), y = 360, 
+               label = "End of COVID-19 (2023)", size = 4, family = "Roboto Condensed", hjust = 1, color = "darkgreen") +
+      annotate(geom = "label", x = as.Date("2025-05-20"), y = 370, 
+               label = "TRUMP ERA 2.0 (2025)", size = 4, family = "Roboto Condensed", hjust = 1, color = "darkred") +
+      labs(title = paste("US Consumer Price Index Trend (Food at Home) of", input$food_category),
+           subtitle = "	Seasonally Adjusted",
+           caption = "Source: FRED",
            x = "Date",
            y = "Price Index") +
-      theme_minimal()
+      theme_bw(base_family = "Roboto Condensed") +
+      theme(plot.title = element_text(face = "bold"))
   })
 }
 
