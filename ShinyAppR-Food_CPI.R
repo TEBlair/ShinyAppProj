@@ -49,6 +49,8 @@ server <- function(input, output) {
       geom_line(color = "blue", size = 1) +
       annotate(geom = "label", x = as.Date("2020-01-01"), y = 310, 
                label = "COVID-19 (2020)", size = 4, family = "Roboto Condensed", hjust = 1, color = "red") +
+      annotate(geom = "label", x = as.Date("2021-01-20"), y = 325, 
+               label = "BIDEN ERA (2021)", size = 4, family = "Roboto Condensed", hjust = 1, color = "darkred") +
       annotate(geom = "label", x = as.Date("2023-05-11"), y = 360, 
                label = "End of COVID-19 (2023)", size = 4, family = "Roboto Condensed", hjust = 1, color = "darkgreen") +
       annotate(geom = "label", x = as.Date("2025-05-20"), y = 370, 
