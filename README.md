@@ -1,7 +1,5 @@
 # ShinyAppProj
-This is a collection of files for Data613. This project will create a shiny app that will create an interactive data visualization using data on the Monthly cost of goods for the last 10 years in America.
-
-This project aims to develop an interactive Shiny app that visualizes the Monthly Cost of Goods in the U.S. over the past 10 years, with a focus on food Consumer Price Index (CPI) inflation. The application will provide insights into price trends and allow users to explore different food categories through interactive features.
+This is a collection of files for Data613. This project aims to develop an interactive Shiny app that visualizes the Monthly Cost of Goods in the U.S. over the past 10 years, with a focus on food Consumer Price Index (CPI) inflation. The application will provide insights into price trends and allow users to explore different food categories through interactive features.
 
 Key Features:
 - Time-Based Slider: Enables users to analyze food price trends over time.
