@@ -5,7 +5,7 @@ This is a collection of files for Data613. This project aims to develop an inter
 
 ## Business Understanding
 
-1. Objective:To develop an interactive Shiny app that visualizes and forecasts U.S. food CPI trends using FRED data, helping users explore inflation patterns and predict future price movements across food categories.
+1. Objective: To develop an interactive Shiny app that visualizes and forecasts U.S. food CPI trends using FRED data, helping users explore inflation patterns and predict future price movements across food categories.
    
 2. Key Focus Areas:
   - Food at Home CPI: Baked Goods, Dairy, Meat, Fruit
