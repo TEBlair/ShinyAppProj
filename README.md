@@ -11,4 +11,4 @@ Datasets will be combined based on observed dates, Total expenditures for "Food 
 
 # Preview of Shiny App (In Progress)
 
-![](images/initial_shiny_app_snapshot.png)
+![](images/updated_shiny_dashboard.png)
