@@ -7,9 +7,11 @@ This project aims to develop an interactive Shiny App that automates CPI data co
 ## Business Understanding
 
 1. Objective: Analyze historical and future trends of food-based inflation.
+  
 2. Key Focus Areas:
 - Food at Home CPI
 - Alcoholic Beverages CPI
+  
 3. Key Questions:
 - What are the historical trends in food inflation?
 - How do food inflation trends compare to alcoholic beverage prices?
