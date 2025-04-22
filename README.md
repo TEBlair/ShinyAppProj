@@ -57,6 +57,14 @@ Datasets will be combined based on observed dates. Total expenditures for "Food 
 
 ![](images/updated_shiny_dashboard.png)
 
+![](images/returns.png)
+
+![](images/forecasting.png)
+
+![](images/volatility.png)
+
+![](images/autocorrelation.png)
+
 ## References
  - FRED Economic Data, CPI for U.S. City Average: Monthly, Seasonally Adjusted:[ https://fred.stlouisfed.org/](https://fred.stlouisfed.org/release/tables?rid=10&eid=34483#snid=34486)
 
