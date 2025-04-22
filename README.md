@@ -1,3 +1,5 @@
+# Shiny App 2025: Food Consumer Price Index Inflation 
+
 ## Introduction
 This is a collection of files for Data613. This project aims to develop an interactive Shiny app that visualizes the Monthly Cost of Goods in the U.S. over the past 10 years, focusing on food Consumer Price Index (CPI) inflation using data from the Federal Reserve Economic Data (FRED). The app automates CPI data collection and applies a range of econometric and time series forecasting models—including ARIMA, SARIMA (Seasonal ARIMA), Holt-Winters, Prophet, and Simple Exponential Smoothing (SES)—to analyze trends and predict future inflation for categories like "Dairy," "Meat, "Fruit," "Baked Goods" and "Alcoholic Beverages." It also incorporates volatility modeling techniques such as GARCH  (Generalized Autoregressive Conditional Heteroskedasticity) and EWMA (Exponentially Weighted Moving Average) to assess fluctuations in food prices over time, offering users an interactive, data-driven exploration of food inflation dynamics in the U.S.
 
@@ -53,7 +55,7 @@ Datasets will be combined based on observed dates. Total expenditures for "Food 
 - *library(shinyWidgets)*
 - *library(DT)*
 
-# Preview of Shiny App
+# Preview of the R Shiny App
 
 ![](images/updated_shiny_dashboard.png)
 
