@@ -18,11 +18,6 @@ This project aims to develop an interactive Shiny App that automates CPI data co
 - How can users interactively explore and compare different forecasting models?
 
 ## Shiny App: Interactive Features
-- Time-Based Slider: Enables users to analyze food price trends over time.
-- Category Dropdown: Allows selection of food categories such as meats and dairy.
-- Predictive Analysis: Forecasts food CPI for 2025, analyzing potential inflation trends.
-
-## Shiny App: Interactive Features
 
 User Inputs:
 - Dropdown: Select CPI category (Food at Home / Alcoholic Beverages)
