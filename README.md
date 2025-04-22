@@ -1,45 +1,41 @@
-# ShinyAppProj
-This is a collection of files for Data613. This project aims to develop an interactive Shiny app that visualizes the Monthly Cost of Goods in the U.S. over the past 10 years, with a focus on food Consumer Price Index (CPI) inflation from the FRED. The application will provide insights into price trends and allow users to explore different food categories through interactive features.
-
 ## Introduction
-This project aims to develop an interactive Shiny App that automates CPI data collection, applies econometric modeling, and provides interactive forecasting for food inflation in the U.S. The app will use FRED’s CPI data for "Food at Home" and "Alcoholic Beverages" and apply time series forecasting models, including ARIMA, SARIMA (Seasonal ARIMA), Holt-Winters, Prophet, and SES (Simple Exponential Smoothing). It will also use volatility models using GARCH (Generalized Autoregressive Conditional Heteroskedasticity) and EWMA (Exponentially Weighted Moving Average).
+This is a collection of files for Data613. This project aims to develop an interactive Shiny app that visualizes the Monthly Cost of Goods in the U.S. over the past 10 years, focusing on food Consumer Price Index (CPI) inflation using data from the Federal Reserve Economic Data (FRED). The app automates CPI data collection and applies a range of econometric and time series forecasting models—including ARIMA, SARIMA (Seasonal ARIMA), Holt-Winters, Prophet, and Simple Exponential Smoothing (SES)—to analyze trends and predict future inflation for categories like "Dairy," "Meat, "Fruit," "Baked Goods" and "Alcoholic Beverages." It also incorporates volatility modeling techniques such as GARCH  (Generalized Autoregressive Conditional Heteroskedasticity) and EWMA (Exponentially Weighted Moving Average) to assess fluctuations in food prices over time, offering users an interactive, data-driven exploration of food inflation dynamics in the U.S.
 
 ## Business Understanding
 
-1. Objective: Analyze historical and future trends of food-based inflation.
-  
+1. Objective:To develop an interactive Shiny app that visualizes and forecasts U.S. food CPI trends using FRED data, helping users explore inflation patterns and predict future price movements across food categories.
+   
 2. Key Focus Areas:
-- Food at Home CPI
-- Alcoholic Beverages CPI
+  - Food at Home CPI: Baked Goods, Dairy, Meat, Fruit
+  - Alcoholic Beverages CPI
   
 3. Key Questions:
-- What are the historical trends in food inflation?
-- How do food inflation trends compare to alcoholic beverage prices?
-- What are the seasonal patterns and long-term trends?
-- Can we accurately forecast CPI using econometric models?
-- How can users interactively explore and compare different forecasting models?
+  - What are the historical trends in food inflation?
+  - How do food inflation trends compare to alcoholic beverage prices?
+  - What are the seasonal patterns and long-term trends?
+  - Can we accurately forecast CPI using econometric models?
+  - How can users interactively explore and compare different forecasting models?
 
 ## Shiny App: Interactive Features
 
 User Inputs:
-- Dropdown: Select CPI category (Food at Home / Alcoholic Beverages)
-- Slider: Choose date range (e.g., 2015–Present)
-- RadioButtons: Compare different forecast models
-- RadioButtons: Compare different volatility models
+  - Dropdown: Select CPI category (Food at Home / Alcoholic Beverages)
+  - Slider: Choose date range (e.g., Jan. 2015 – Jan. 2025)
+  - RadioButtons: Compare different forecast and volatility models
 
 Outputs:
 1. Time Series Visualization:
   - Historical CPI trends
   - CPI Growth Rate (Returns)
 2. Forecasting Models:
-  - Compare ARIMA vs Prophet vs SES vs EWMA vs Holt-Winters
-  - Show MAE (MAE), RMSE, and MAPE (Performance Metrics) results
+  - Compares ARIMA vs SARIMA vs Prophet vs SES vs Holt-Winters
+  - Displays the MAE (MAE), RMSE, and MAPE (Performance Metrics) results
   - Allow users to download forecasts
 3. Volatility Analysis:
   - GARCH & EWMA models
   - Autocorrelation plots
 
-Datasets will be combined based on observed dates. Total expenditures for "Food at Home" and "Alcoholic Beverages" will be summed and compared with yearly CPI percentage changes, and predictive modeling techniques such as machine learning approaches may be explored for forecasting. This Shiny app will provide an interactive and data-driven way to explore food inflation trends and potential future price shifts.
+Datasets will be combined based on observed dates. Total expenditures for "Food at Home" and "Alcoholic Beverages" will be summed and compared with yearly CPI percentage changes, and predictive modeling techniques such as machine learning approaches may be explored for forecasting.
 
 ## Libraries Used
 
@@ -63,3 +59,4 @@ Datasets will be combined based on observed dates. Total expenditures for "Food 
 
 ## References
  - FRED Economic Data, CPI for U.S. City Average: Monthly, Seasonally Adjusted:[ https://fred.stlouisfed.org/](https://fred.stlouisfed.org/release/tables?rid=10&eid=34483#snid=34486)
+
